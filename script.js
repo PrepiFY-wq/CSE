@@ -269,34 +269,38 @@ function(){
             document.getElementById(
             "whyJoin"
             ).value
-
+language: currentLanguage
         };
 
-     try{
+   try {
 
-   await fetch(API_URL,{
-      method:"POST",
-      mode:"no-cors",
-      body:JSON.stringify(data)
-   });
+```
+await fetch(API_URL,{
+    method:"POST",
+    mode:"no-cors",
+    body:JSON.stringify(data)
+});
 
-   form.reset();
+form.reset();
 
-   showPage("successPage");
+showPage("successPage");
+```
 
 }
-            else{
+catch(error){
 
-                alert(
-                currentLanguage==="hi"
-                ? "कुछ त्रुटि हुई।"
-                : "Something went wrong."
-                );
+```
+console.error(error);
 
-            }
+alert(
+currentLanguage==="hi"
+? "सर्वर से संपर्क नहीं हो सका।"
+: "Unable to connect to server."
+);
+```
 
-        }
-        catch(error){
+}
+
 
             console.error(error);
 
