@@ -1,0 +1,38 @@
+/* Theme Colors */
+Primary: #0A192F;
+Secondary: #112240;
+Accent: #FFD700;
+Text: #E6F1FF;
+
+/* Font */
+Poppins, Inter, sans-serif;
+
+/* Background */
+Animated gradient:
+#0A192F → #112240 → #1B263B
+
+/* Cards */
+Glassmorphism:
+background: rgba(255,255,255,0.08);
+backdrop-filter: blur(12px);
+border-radius: 20px;
+
+/* Buttons */
+Gold gradient
+Hover glow effect
+Scale animation
+
+/* Form Inputs */
+Rounded
+Focus glow
+Smooth transitions
+
+/* Animations */
+fadeIn
+slideUp
+floating
+pulse
+shine
+
+/* Mobile */
+Responsive below 768px
