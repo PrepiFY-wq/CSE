@@ -272,25 +272,19 @@ function(){
 
         };
 
-        try{
+     try{
 
-           const response = await fetch(API_URL,{
-    method:"POST",
-    body:JSON.stringify(data)
-});
+   await fetch(API_URL,{
+      method:"POST",
+      mode:"no-cors",
+      body:JSON.stringify(data)
+   });
 
-            const result =
-            await response.json();
+   form.reset();
 
-            if(result.success){
+   showPage("successPage");
 
-                form.reset();
-
-                showPage(
-                "successPage"
-                );
-
-            }
+}
             else{
 
                 alert(
