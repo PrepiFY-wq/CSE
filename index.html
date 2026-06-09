@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PrepCSE Registration Portal</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section id="language-selection">
+  <h1>PrepCSE</h1>
+  <p>Where Aspirants Become Administrators</p>
+  <h2>Select Language / भाषा चुनें</h2>
+  <button onclick="setLanguage('en')">English</button>
+  <button onclick="setLanguage('hi')">हिन्दी</button>
+</section>
+
+<section id="landing" style="display:none;">
+  <div class="left">
+    <h1 id="title">PrepCSE</h1>
+    <p id="tagline">Where Aspirants Become Administrators</p>
+
+    <div class="journey">
+      <div>📚 Preparation</div>
+      <div>✍️ Answer Writing</div>
+      <div>📊 Weekly Tests</div>
+      <div>🎯 UPSC CSE</div>
+      <div>👨‍💼 Civil Services</div>
+      <div>🏛️ LBSNAA</div>
+    </div>
+  </div>
+
+  <div class="right">
+    <button onclick="showInstructions()">🚀 Register Now</button>
+  </div>
+</section>
+
+<section id="instructions" style="display:none;">
+  <h2>Instructions & Declaration</h2>
+
+  <ol>
+    <li>You must maintain consistency in learning and regularly update your daily targets.</li>
+    <li>You are required to follow the daily targets provided in the group.</li>
+    <li>Daily Mains questions will be provided in the group. You must submit answers daily.</li>
+    <li>A practice test will be conducted every Sunday.</li>
+    <li>You must remain active in discussions and help fellow aspirants.</li>
+    <li>Failure to maintain consistency may lead to removal with or without warning.</li>
+    <li>If you are unable to remain active, inform the group with a valid reason.</li>
+  </ol>
+
+  <label><input type="checkbox" id="acceptAll"> I accept all instructions and declaration</label>
+  <br><br>
+  <button onclick="showForm()">Continue</button>
+</section>
+
+<section id="formSection" style="display:none;">
+  <h2>Registration Form</h2>
+
+  <form id="registrationForm">
+    <input type="text" placeholder="Full Name" required><br><br>
+    <input type="email" placeholder="Email Address" required><br><br>
+    <input type="date" required><br><br>
+    <input type="text" placeholder="State" required><br><br>
+    <input type="text" placeholder="Graduation Degree" required><br><br>
+    <input type="number" placeholder="Attempts Till Now"><br><br>
+    <input type="text" placeholder="UPSC Attempt Year"><br><br>
+    <input type="text" placeholder="Optional Subject"><br><br>
+    <input type="text" placeholder="Current Occupation"><br><br>
+    <input type="text" placeholder="Telegram Username"><br><br>
+
+    <textarea placeholder="Why do you want to join PrepCSE?"></textarea><br><br>
+
+    <button type="submit">Submit Registration</button>
+  </form>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
