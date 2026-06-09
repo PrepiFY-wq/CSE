@@ -1,80 +1,689 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PrepCSE Registration Portal</title>
+
+<title>PrepCSE | Registration Portal</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
 
-<section id="language-selection">
-  <h1>PrepCSE</h1>
-  <p>Where Aspirants Become Administrators</p>
-  <h2>Select Language / भाषा चुनें</h2>
-  <button onclick="setLanguage('en')">English</button>
-  <button onclick="setLanguage('hi')">हिन्दी</button>
-</section>
+<!-- Animated Background -->
 
-<section id="landing" style="display:none;">
-  <div class="left">
-    <h1 id="title">PrepCSE</h1>
-    <p id="tagline">Where Aspirants Become Administrators</p>
+<div class="bg-animation">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
 
-    <div class="journey">
-      <div>📚 Preparation</div>
-      <div>✍️ Answer Writing</div>
-      <div>📊 Weekly Tests</div>
-      <div>🎯 UPSC CSE</div>
-      <div>👨‍💼 Civil Services</div>
-      <div>🏛️ LBSNAA</div>
+<!-- =========================
+     LANGUAGE SELECTION PAGE
+========================== -->
+
+<section id="languagePage" class="page active">
+
+    <div class="language-card">
+
+        <h1 class="main-logo">
+            PrepCSE
+        </h1>
+
+        <p class="tagline">
+            Where Aspirants Become Administrators
+        </p>
+
+        <div class="language-icon">
+            🌐
+        </div>
+
+        <h2>Select Your Language</h2>
+
+        <div class="language-buttons">
+
+            <button
+                class="lang-btn english-btn"
+                onclick="setLanguage('en')">
+
+                English
+
+            </button>
+
+            <button
+                class="lang-btn hindi-btn"
+                onclick="setLanguage('hi')">
+
+                हिन्दी
+
+            </button>
+
+        </div>
+
     </div>
-  </div>
 
-  <div class="right">
-    <button onclick="showInstructions()">🚀 Register Now</button>
-  </div>
 </section>
 
-<section id="instructions" style="display:none;">
-  <h2>Instructions & Declaration</h2>
+<!-- =========================
+     LANDING PAGE
+========================== -->
 
-  <ol>
-    <li>You must maintain consistency in learning and regularly update your daily targets.</li>
-    <li>You are required to follow the daily targets provided in the group.</li>
-    <li>Daily Mains questions will be provided in the group. You must submit answers daily.</li>
-    <li>A practice test will be conducted every Sunday.</li>
-    <li>You must remain active in discussions and help fellow aspirants.</li>
-    <li>Failure to maintain consistency may lead to removal with or without warning.</li>
-    <li>If you are unable to remain active, inform the group with a valid reason.</li>
-  </ol>
+<section id="landingPage" class="page">
 
-  <label><input type="checkbox" id="acceptAll"> I accept all instructions and declaration</label>
-  <br><br>
-  <button onclick="showForm()">Continue</button>
+    <div class="landing-container">
+
+        <!-- LEFT SIDE -->
+
+        <div class="left-section">
+
+            <h1 id="landingTitle">
+                PrepCSE
+            </h1>
+
+            <p id="landingTagline">
+                Where Aspirants Become Administrators
+            </p>
+
+            <div class="journey-card">
+
+                <h2 id="journeyHeading">
+                    Journey To LBSNAA
+                </h2>
+
+                <div class="journey-path">
+
+                    <div class="journey-step">
+                        <div class="step-icon">📚</div>
+                        <div class="step-text" id="step1">
+                            Preparation
+                        </div>
+                    </div>
+
+                    <div class="arrow">↓</div>
+
+                    <div class="journey-step">
+                        <div class="step-icon">✍️</div>
+                        <div class="step-text" id="step2">
+                            Answer Writing
+                        </div>
+                    </div>
+
+                    <div class="arrow">↓</div>
+
+                    <div class="journey-step">
+                        <div class="step-icon">📊</div>
+                        <div class="step-text" id="step3">
+                            Weekly Tests
+                        </div>
+                    </div>
+
+                    <div class="arrow">↓</div>
+
+                    <div class="journey-step">
+                        <div class="step-icon">🎯</div>
+                        <div class="step-text" id="step4">
+                            UPSC CSE
+                        </div>
+                    </div>
+
+                    <div class="arrow">↓</div>
+
+                    <div class="journey-step">
+                        <div class="step-icon">👨‍💼</div>
+                        <div class="step-text" id="step5">
+                            Civil Services
+                        </div>
+                    </div>
+
+                    <div class="arrow">↓</div>
+
+                    <div class="journey-step">
+                        <div class="step-icon">🏛️</div>
+                        <div class="step-text" id="step6">
+                            LBSNAA
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+
+        <div class="right-section">
+
+            <div class="register-card">
+
+                <h2 id="welcomeHeading">
+                    Welcome Aspirant
+                </h2>
+
+                <p id="welcomeText">
+                    Join a disciplined community focused on consistency,
+                    answer writing, peer learning and UPSC preparation.
+                </p>
+
+                <button
+                    id="registerBtn"
+                    class="register-btn"
+                    onclick="showInstructions()">
+
+                    🚀 Register Now
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
 
-<section id="formSection" style="display:none;">
-  <h2>Registration Form</h2>
+  <!-- =========================
+     INSTRUCTIONS PAGE
+========================== -->
 
-  <form id="registrationForm">
-    <input type="text" placeholder="Full Name" required><br><br>
-    <input type="email" placeholder="Email Address" required><br><br>
-    <input type="date" required><br><br>
-    <input type="text" placeholder="State" required><br><br>
-    <input type="text" placeholder="Graduation Degree" required><br><br>
-    <input type="number" placeholder="Attempts Till Now"><br><br>
-    <input type="text" placeholder="UPSC Attempt Year"><br><br>
-    <input type="text" placeholder="Optional Subject"><br><br>
-    <input type="text" placeholder="Current Occupation"><br><br>
-    <input type="text" placeholder="Telegram Username"><br><br>
+<section id="instructionsPage" class="page">
 
-    <textarea placeholder="Why do you want to join PrepCSE?"></textarea><br><br>
+    <div class="instructions-container">
 
-    <button type="submit">Submit Registration</button>
-  </form>
+        <div class="instructions-header">
+
+            <h1 id="instructionTitle">
+                Instructions & Declaration
+            </h1>
+
+            <p id="instructionSubtitle">
+                Please read all instructions carefully before proceeding.
+            </p>
+
+        </div>
+
+        <!-- Instruction 1 -->
+
+        <div class="instruction-card">
+
+            <h3>1. Consistency Commitment</h3>
+
+            <p>
+                You must maintain consistency in learning and regularly update
+                your daily targets along with what you have learned throughout
+                the day.
+            </p>
+
+            <div class="choice-group">
+                <label>
+                    <input type="radio" name="inst1" value="accept">
+                    I Accept
+                </label>
+
+                <label>
+                    <input type="radio" name="inst1" value="decline">
+                    I Decline
+                </label>
+            </div>
+
+        </div>
+
+        <!-- Instruction 2 -->
+
+        <div class="instruction-card">
+
+            <h3>2. Daily Target Compliance</h3>
+
+            <p>
+                You are required to follow the daily targets provided in the
+                group to maintain transparency and accountability.
+            </p>
+
+            <div class="choice-group">
+                <label>
+                    <input type="radio" name="inst2" value="accept">
+                    I Accept
+                </label>
+
+                <label>
+                    <input type="radio" name="inst2" value="decline">
+                    I Decline
+                </label>
+            </div>
+
+        </div>
+
+        <!-- Instruction 3 -->
+
+        <div class="instruction-card">
+
+            <h3>3. Daily Answer Writing Commitment</h3>
+
+            <p>
+                Daily Mains questions will be provided in the group. You must
+                write and submit your answers in the group before the end of
+                the day.
+            </p>
+
+            <div class="choice-group">
+                <label>
+                    <input type="radio" name="inst3" value="accept">
+                    I Accept
+                </label>
+
+                <label>
+                    <input type="radio" name="inst3" value="decline">
+                    I Decline
+                </label>
+            </div>
+
+        </div>
+
+        <!-- Instruction 4 -->
+
+        <div class="instruction-card">
+
+            <h3>4. Weekly Test Commitment</h3>
+
+            <p>
+                A practice test will be conducted every Sunday covering the
+                topics studied from Monday to Saturday. Participation is
+                mandatory.
+            </p>
+
+            <div class="choice-group">
+                <label>
+                    <input type="radio" name="inst4" value="accept">
+                    I Accept
+                </label>
+
+                <label>
+                    <input type="radio" name="inst4" value="decline">
+                    I Decline
+                </label>
+            </div>
+
+        </div>
+
+        <!-- Instruction 5 -->
+
+        <div class="instruction-card">
+
+            <h3>5. Active Participation & Peer Learning</h3>
+
+            <p>
+                You must remain active in group discussions, help solve doubts
+                and queries of fellow aspirants, and provide constructive
+                suggestions on their answer writing whenever possible.
+            </p>
+
+            <div class="choice-group">
+                <label>
+                    <input type="radio" name="inst5" value="accept">
+                    I Accept
+                </label>
+
+                <label>
+                    <input type="radio" name="inst5" value="decline">
+                    I Decline
+                </label>
+            </div>
+
+        </div>
+
+        <!-- Instruction 6 -->
+
+        <div class="instruction-card">
+
+            <h3>6. Inactivity & Removal Policy</h3>
+
+            <p>
+                Failure to maintain consistency, prolonged inactivity, or
+                remaining merely a silent observer may lead to removal from
+                the initiative with or without prior warning.
+            </p>
+
+            <div class="choice-group">
+                <label>
+                    <input type="radio" name="inst6" value="accept">
+                    I Accept
+                </label>
+
+                <label>
+                    <input type="radio" name="inst6" value="decline">
+                    I Decline
+                </label>
+            </div>
+
+        </div>
+
+        <!-- Instruction 7 -->
+
+        <div class="instruction-card">
+
+            <h3>7. Prior Intimation for Absence</h3>
+
+            <p>
+                If you are unable to study, update targets, participate in
+                discussions, or remain active due to any genuine reason, you
+                are expected to inform the group in advance and mention the
+                valid reason for your absence.
+            </p>
+
+            <div class="choice-group">
+                <label>
+                    <input type="radio" name="inst7" value="accept">
+                    I Accept
+                </label>
+
+                <label>
+                    <input type="radio" name="inst7" value="decline">
+                    I Decline
+                </label>
+            </div>
+
+        </div>
+
+        <!-- Final Declaration -->
+
+        <div class="declaration-card">
+
+            <h2>Final Declaration</h2>
+
+            <p>
+                I have carefully read and understood all the instructions
+                mentioned above. I voluntarily agree to follow the rules,
+                maintain discipline and consistency, actively contribute to
+                the learning environment, and uphold the objectives of
+                PrepCSE.
+            </p>
+
+            <p>
+                I understand that failure to comply with these guidelines may
+                result in my removal from the initiative.
+            </p>
+
+            <div class="choice-group declaration-choice">
+
+                <label>
+                    <input
+                        type="radio"
+                        name="declaration"
+                        value="accept">
+
+                    I Accept the Declaration
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="declaration"
+                        value="decline">
+
+                    I Decline
+                </label>
+
+            </div>
+
+        </div>
+
+        <!-- Continue Button -->
+
+        <div class="continue-section">
+
+            <button
+                id="continueToFormBtn"
+                class="continue-btn"
+                onclick="validateInstructions()">
+
+                Continue To Registration →
+
+            </button>
+
+        </div>
+
+    </div>
+
 </section>
+
+  <!-- =========================
+     REGISTRATION FORM PAGE
+========================== -->
+
+<section id="registrationPage" class="page">
+
+    <div class="form-container">
+
+        <div class="form-header">
+
+            <h1 id="formTitle">
+                PrepCSE Registration Form
+            </h1>
+
+            <p id="formSubtitle">
+                Fill all details carefully before submitting.
+            </p>
+
+        </div>
+
+        <form id="registrationForm">
+
+            <div class="form-grid">
+
+                <div class="input-group">
+                    <label>Full Name *</label>
+                    <input
+                        type="text"
+                        id="fullName"
+                        required>
+                </div>
+
+                <div class="input-group">
+                    <label>Email Address *</label>
+                    <input
+                        type="email"
+                        id="email"
+                        required>
+                </div>
+
+                <div class="input-group">
+                    <label>Date of Birth *</label>
+                    <input
+                        type="date"
+                        id="dob"
+                        required>
+                </div>
+
+                <div class="input-group">
+                    <label>State *</label>
+                    <input
+                        type="text"
+                        id="state"
+                        required>
+                </div>
+
+                <div class="input-group">
+                    <label>Graduation Degree *</label>
+                    <input
+                        type="text"
+                        id="graduationDegree"
+                        required>
+                </div>
+
+                <div class="input-group">
+                    <label>Attempts Till Now *</label>
+                    <input
+                        type="number"
+                        id="attemptsTillNow"
+                        min="0"
+                        required>
+                </div>
+
+                <div class="input-group">
+                    <label>UPSC Attempt Year *</label>
+                    <input
+                        type="text"
+                        id="upscAttemptYear"
+                        placeholder="2027"
+                        required>
+                </div>
+
+                <div class="input-group">
+                    <label>Optional Subject *</label>
+                    <input
+                        type="text"
+                        id="optionalSubject"
+                        required>
+                </div>
+
+                <div class="input-group">
+                    <label>Current Occupation *</label>
+                    <input
+                        type="text"
+                        id="currentOccupation"
+                        required>
+                </div>
+
+                <div class="input-group">
+                    <label>Telegram Username *</label>
+                    <input
+                        type="text"
+                        id="telegramUsername"
+                        placeholder="@username"
+                        required>
+                </div>
+
+            </div>
+
+            <div class="input-group full-width">
+
+                <label>
+                    Why do you want to join PrepCSE?
+                </label>
+
+                <textarea
+                    id="whyJoin"
+                    rows="6"
+                    placeholder="Write your answer here..."
+                    required>
+                </textarea>
+
+            </div>
+
+            <div class="submit-section">
+
+                <button
+                    type="submit"
+                    id="submitBtn"
+                    class="submit-btn">
+
+                    Submit Registration
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     SUCCESS PAGE
+========================== -->
+
+<section id="successPage" class="page">
+
+    <div class="success-card">
+
+        <div class="success-icon">
+            ✅
+        </div>
+
+        <h1>
+            Registration Submitted Successfully
+        </h1>
+
+        <p>
+            Thank you for registering with PrepCSE.
+        </p>
+
+        <p>
+            Your application has been received successfully
+            and is currently under review.
+        </p>
+
+        <div class="status-box">
+
+            <h3>Status</h3>
+
+            <span class="pending-status">
+                Pending Verification
+            </span>
+
+        </div>
+
+        <p>
+            Further updates will be communicated to you
+            through your registered email address.
+        </p>
+
+        <button
+            class="home-btn"
+            onclick="goToHome()">
+
+            Back To Home
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     FOOTER
+========================== -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <h3>PrepCSE</h3>
+
+        <p>
+            Where Aspirants Become Administrators
+        </p>
+
+        <p>
+            Discipline • Consistency • Accountability
+        </p>
+
+        <div class="footer-line"></div>
+
+        <p class="copyright">
+
+            © 2026 PrepCSE.
+            All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
 
 <script src="script.js"></script>
+
 </body>
 </html>
